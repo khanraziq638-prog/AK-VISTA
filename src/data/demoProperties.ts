@@ -1,0 +1,10 @@
+import type { Property } from '../lib/supabase'
+
+export const demoProperties: Property[] = [
+  { id:'demo-1',title:'Serene 2 BHK at Gangapur Road',slug:'2-bhk-flat-gangapur-road-nashik',purpose:'sale',category:'Residential',subtype:'Apartment',city:'Nashik',locality:'Gangapur Road',price:7200000,price_text:'₹72 Lakh',bedrooms:2,bathrooms:2,carpet_area:760,area_unit:'sq ft',status:'published',featured:true,images:['/assets/ak-vista-hero.png'] },
+  { id:'demo-2',title:'Contemporary 3 BHK on College Road',slug:'3-bhk-flat-college-road-nashik',purpose:'sale',category:'Residential',subtype:'Apartment',city:'Nashik',locality:'College Road',price:12500000,price_text:'₹1.25 Cr',bedrooms:3,bathrooms:3,carpet_area:1280,area_unit:'sq ft',status:'published',featured:true,images:['/assets/ak-vista-hero.png'] },
+  { id:'demo-3',title:'Independent Villa in Govind Nagar',slug:'villa-govind-nagar-nashik',purpose:'sale',category:'Residential',subtype:'Villa',city:'Nashik',locality:'Govind Nagar',price:24000000,price_text:'₹2.40 Cr',bedrooms:4,bathrooms:4,carpet_area:2600,area_unit:'sq ft',status:'published',featured:true,images:['/assets/ak-vista-hero.png'] },
+  { id:'demo-4',title:'Ready Commercial Office, Indira Nagar',slug:'commercial-office-indira-nagar-nashik',purpose:'sale',category:'Commercial',subtype:'Office',city:'Nashik',locality:'Indira Nagar',price:6300000,price_text:'₹63 Lakh',carpet_area:820,area_unit:'sq ft',status:'published',images:['/assets/ak-vista-hero.png'] },
+  { id:'demo-5',title:'Retail Shop on Nashik Road',slug:'retail-shop-nashik-road',purpose:'rent',category:'Commercial',subtype:'Shop',city:'Nashik',locality:'Nashik Road',rent:35000,price_text:'₹35,000 / month',carpet_area:480,area_unit:'sq ft',status:'published',images:['/assets/ak-vista-hero.png'] },
+  { id:'demo-6',title:'Open Plot near Trimbak Road',slug:'plot-trimbak-road-nashik',purpose:'sale',category:'Plot',subtype:'Residential Plot',city:'Nashik',locality:'Trimbak Road',price:5100000,price_text:'₹51 Lakh',carpet_area:1800,area_unit:'sq ft',status:'published',images:['/assets/ak-vista-hero.png'] }
+]

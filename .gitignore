@@ -1,0 +1,35 @@
+# Dependencies and build outputs
+node_modules/
+dist/
+.pnpm-store/
+
+# Environment and credentials
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# TypeScript and tool caches
+*.tsbuildinfo
+.vite/
+.cache/
+coverage/
+vite.config.js
+vite.config.d.ts
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+tmp/
+temp/
+preview-server.cmd
+
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
