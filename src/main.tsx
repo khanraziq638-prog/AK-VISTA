@@ -10,6 +10,8 @@ import './category-images.css'
 import './details.css'
 import './optimizations.css'
 import './hero-refinement.css'
+import './admin-leads.css'
+import './area-seo.css'
 import { LoadingScreen } from './components/animations/LoadingScreen'
 import { SmoothScrollProvider } from './components/animations/SmoothScrollProvider'
 

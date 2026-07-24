@@ -8,6 +8,7 @@ import { useReducedMotion } from '../hooks/useReducedMotion'
 import { business } from '../config/business'
 import { supabase, type Property } from '../lib/supabase'
 import FounderSection from '../FounderSection'
+import { areaSlugByName } from '../config/areas'
 
 const locations = ['Gangapur Road', 'College Road', 'Indira Nagar', 'Govind Nagar', 'Pathardi Phata', 'Panchavati', 'Nashik Road', 'Trimbak Road']
 const categories = [
@@ -102,7 +103,7 @@ export default function HomePage() {
     <StorySection/>
     <section className="premium-section trust-section"><Reveal><p className="kicker">Why AK Vista</p><h2>A calmer, clearer way<br/><em>to make your next move.</em></h2></Reveal><div className="trust-grid">{trust.map(([title, copy], index) => <Reveal key={title} delay={index * .08}><article><span>{index === 0 ? <ShieldCheck/> : index === 1 ? <MapPin/> : index === 2 ? <CheckCircle2/> : <KeyRound/>}</span><h3>{title}</h3><p>{copy}</p></article></Reveal>)}</div></section>
     <FounderSection/>
-    <section className="locations-section"><div><p className="kicker">Nashik, neighbourhood by neighbourhood</p><h2>Know the address.<br/><em>Understand the opportunity.</em></h2></div><div className="locations-list">{locations.map((item, index) => <Link key={item} to={`/properties?location=${encodeURIComponent(item)}`}><span>0{index + 1}</span><b>{item}</b><ArrowRight size={18}/></Link>)}</div></section>
+    <section className="locations-section"><div><p className="kicker">Nashik, neighbourhood by neighbourhood</p><h2>Know the address.<br/><em>Understand the opportunity.</em></h2></div><div className="locations-list">{locations.map((item, index) => <Link key={item} to={areaSlugByName[item] ? `/areas/${areaSlugByName[item]}` : `/properties?location=${encodeURIComponent(item)}`}><span>0{index + 1}</span><b>{item}</b><ArrowRight size={18}/></Link>)}</div></section>
     <section className="owner-cta"><div><p className="kicker">Owners & developers</p><h2>Ready to list your<br/><em>property well?</em></h2><p>Reach verified buyers with a considered presentation and guidance from the AK Vista team.</p><Link className="gold-button" to="/list-your-property">List your property <ArrowRight size={16}/></Link></div><a className="owner-contact" href={business.phoneHref}><span>Speak directly with AK Vista</span><strong>{business.phone}</strong></a></section>
   </>
 }

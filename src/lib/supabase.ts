@@ -15,4 +15,10 @@ export interface Property {
   developer_name?: string; project_name?: string; possession_date?: string; created_at?: string
 }
 
+export interface Lead {
+  id: string; name: string; mobile: string; whatsapp?: string | null; email?: string | null
+  enquiry_type: string; property_title?: string | null; budget?: string | null; preferred_location?: string | null
+  message?: string | null; lead_status: string; source?: string | null; internal_notes?: string | null; created_at: string
+}
+
 export const isAdmin = (user: { app_metadata?: Record<string, unknown> } | null) => user?.app_metadata?.role === 'admin'
