@@ -5,5 +5,8 @@ import Router from './Router'
 import './styles.css'
 import './admin-media.css'
 import './founders.css'
+import './premium.css'
+import { LoadingScreen } from './components/animations/LoadingScreen'
+import { SmoothScrollProvider } from './components/animations/SmoothScrollProvider'
 
-ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode><BrowserRouter><Router /></BrowserRouter></React.StrictMode>)
+ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode><BrowserRouter><SmoothScrollProvider><LoadingScreen/><Router /></SmoothScrollProvider></BrowserRouter></React.StrictMode>)
