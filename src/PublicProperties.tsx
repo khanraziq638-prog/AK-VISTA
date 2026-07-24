@@ -4,7 +4,7 @@ import { BedDouble, MapPin, Search, ShowerHead } from 'lucide-react'
 import type { Property } from './lib/supabase'
 import { supabase } from './lib/supabase'
 
-const fallbackImage = '/assets/ak-vista-hero.png'
+const fallbackImage = '/assets/ak-vista-hero.webp'
 const displayPrice = (property: Property) => property.price_text || (property.purpose === 'rent' ? `₹${(property.rent || 0).toLocaleString('en-IN')} / month` : `₹${(property.price || 0).toLocaleString('en-IN')}`)
 
 export default function PublicProperties(){

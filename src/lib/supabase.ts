@@ -11,7 +11,8 @@ export interface Property {
   id: string; title: string; slug: string; description?: string; purpose: 'sale' | 'rent'; category: string; subtype?: string
   city: string; locality: string; price?: number; rent?: number; price_text?: string; bedrooms?: number; bathrooms?: number
   carpet_area?: number; area_unit?: string; images?: string[]; cover_image?: string; status: PropertyStatus; featured?: boolean
-  rera_number?: string; created_at?: string
+  rera_number?: string; amenities?: string[]; furnishing?: string; parking?: string; address?: string
+  developer_name?: string; project_name?: string; possession_date?: string; created_at?: string
 }
 
 export const isAdmin = (user: { app_metadata?: Record<string, unknown> } | null) => user?.app_metadata?.role === 'admin'
